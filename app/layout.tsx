@@ -3,21 +3,28 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Subramanya | Frontend Developer",
-  description: "Frontend Developer with 3+ years of experience in React.js, Next.js, React Native, TypeScript and Redux. Building scalable, performant web & mobile applications.",
+  description: "Frontend Developer with 3+ years building fast, beautiful web & mobile experiences with React, Next.js, React Native and more.",
   authors: [{ name: "Subramanya" }],
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#050505",
+  themeColor: "#0a0f1e",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-bg antialiased">{children}</body>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
+      <body className="bg-navy antialiased">{children}</body>
     </html>
   );
 }
